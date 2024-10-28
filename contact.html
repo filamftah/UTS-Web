@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - ZonaBelanja</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa; /* Warna latar belakang */
+            margin: 0;
+            padding: 0;
+            color: #343a40; /* Warna teks */
+        }
+
+        header {
+            background-color: #9fd1c9; /* Warna hijau pastel */
+            color: #f6d860;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #2f8380; 
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #9fd1c9; /* Warna hijau saat fokus */
+            outline: none;
+        }
+
+        .contact-form button {
+            padding: 15px;
+            background-color: #9fd1c9; /* Warna tombol */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #88b7b1; /* Warna tombol saat hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ced4da;
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #e9ecef;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa; /* Warna baris genap */
+        }
+
+        tbody tr:hover {
+            background-color: #e2e6ea; /* Warna saat hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #9fd1c9; /* Warna hijau pastel */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ZonaBelanja</h1>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="login.html">Login</a>
+            <a href="about.html">Tentang Kami</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Hubungi Kami</h2>
+        <form class="contact-form" id="contactForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+
+        <h2>Pesan Terkirim</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Pesan</th>
+                </tr>
+            </thead>
+            <tbody id="contactTableBody">
+                <!-- Data akan ditambahkan di sini -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ZonaBelanja. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman form secara default
+            
+            // Mengambil data dari form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Menambahkan data ke tabel
+            const tableBody = document.getElementById('contactTableBody');
+            const newRow = tableBody.insertRow();
+
+            newRow.insertCell(0).textContent = name;
+            newRow.insertCell(1).textContent = email;
+            newRow.insertCell(2).textContent = message;
+
+            // Reset form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

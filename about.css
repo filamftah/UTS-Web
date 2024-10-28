@@ -1,0 +1,119 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Mengganti warna latar belakang */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9fd1c9;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+header h1 {
+    color: #ffffff; /* Mengubah warna teks logo */
+}
+
+nav a {
+    color: #ffffff; /* Mengubah warna link navigasi */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Mengubah warna saat hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 2rem 5%;
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Visi dan Misi */
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.vision, .mission {
+    width: 45%; /* Mengatur lebar untuk dua kolom */
+    background-color: #e8f5e9; /* Latar belakang kolom */
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.vision h3, .mission h3 {
+    color: #9fd1c9;
+    margin-bottom: 0.5rem;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+    background-color: #9fd1c9;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #ffeb3b; /* Mengubah warna saat hover */
+}

@@ -1,0 +1,122 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fb; /* Latar belakang yang lebih lembut */
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #9fd1c9;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #e2e2e2;
+}
+
+header h1 {
+    color: #f6d860;
+}
+
+/* Halaman Login */
+.login-section {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #ffffff; /* Warna latar belakang putih */
+    border-radius: 12px; /* Sudut lebih melengkung */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    text-align: center;
+}
+
+.login-section h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem; /* Ukuran font yang lebih besar untuk judul */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Radius sudut yang lebih lembut */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #9fd1c9; /* Warna border saat fokus */
+    outline: none; /* Hilangkan outline default */
+}
+
+.login-button {
+    background-color: #f6d860;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px; /* Radius sudut yang lebih lembut */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem; /* Ukuran font yang lebih besar */
+    transition: background 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e0c050; /* Warna tombol saat hover */
+}
+
+/* Tautan Pendaftaran */
+.register-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: #9fd1c9; /* Warna link pendaftaran */
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #9fd1c9;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.footer-nav a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #f6d860;
+}

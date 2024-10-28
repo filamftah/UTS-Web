@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZonaBelanja - Pembelian Produk</title>
+    <link rel="stylesheet" href="beli.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ZonaBelanja</h1>
+        </div>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="about.html">Tentang Kami</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Detail Produk -->
+        <section class="detail-produk">
+            <div class="product-image">
+                <img src="skintific.jpg" alt="Skintific" />
+            </div>
+            <div class="product-info">
+                <h2>Skintific</h2>
+                <p class="price">Rp350.000</p>
+                <p class="description">
+                    Skincare terbaik untuk perawatan kulit Anda. Cocok untuk semua jenis kulit dan membantu menjaga kelembapan wajah Anda.
+                </p>
+
+                <!-- Form Pembelian -->
+                <form class="purchase-form" action="konfirmasi.html" method="post">
+                    <label for="quantity">Jumlah:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                    <button type="submit" class="buy-button">Beli Sekarang</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ZonaBelanja. Semua hak dilindungi.</p>
+        <nav class="footer-nav">
+            <a href="contact.html">Bantuan</a> | 
+            <a href="#">Kontak</a>
+        </nav>
+    </footer>
+</body>
+</html>
